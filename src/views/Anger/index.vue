@@ -3,12 +3,9 @@
     <div class="content-margin">
       <div class="stories">
         <div v-for="story in fmtStory" :key="story.idHref" class="story-wrapper">
-          <router-link
-            class="story"
-            :to="`/angers/${story.category}/${story.idHref}`"
-          >
+          <a class="story" :href="story.reference">
           {{ story.fmted }}
-          </router-link>
+          </a>
         </div>
       </div>
     </div>
@@ -25,7 +22,7 @@ export default {
       storiesStore: state => state.anger.stories
     }),
     fmtStory () {
-      return this.storiesStore.map(({ story, id_href: idHref, category }) => {
+      return this.storiesStore.map(({ story, id_href: idHref, category, reference }) => {
         // fmt story paragraph
         const splitedStr = story.slice(0, 150).split('')
         let extraCharsCount = 0
@@ -37,7 +34,8 @@ export default {
         return {
           fmted: splitedStr.reverse().slice(0, (splitedStr.length - extraCharsCount)).join('') + '...',
           idHref: idHref,
-          category: category
+          category: category,
+          reference: reference
         }
       })
     }
