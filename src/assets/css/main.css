@@ -8,6 +8,11 @@ html, body, .app {
 }
 
 .container {
+	width: var(--wrapper-default);
 	max-width: var(--wrapper-default);
 	margin: 0 auto;
+}
+
+a {
+	color: var(--c-f-default);
 }

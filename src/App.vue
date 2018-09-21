@@ -19,4 +19,5 @@ export default {
 @import '_reset';
 @import '_variables';
 @import 'main';
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
 </style>

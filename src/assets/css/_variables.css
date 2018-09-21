@@ -1,8 +1,8 @@
 :root {
 	/* Primary Color */
 	--dark: black;
-	--light: #F5F5F5;
-	--highlight: #FFA8A8;
+	--light: #F0F0F0;
+	--highlight: #FF9B9B;
 
 	/* Secondary Color */
 	--c-default: var(--dark);
@@ -11,6 +11,9 @@
 
 	/* font */
 	--f-default: 'Libre Baskerville', serif;
+	--fs-default: 24px;
+	--letter-space-s: 0.8px;
+	--letter-space-default: var(--letter-space-s);
 
 	/* container */
 	--wrapper: 1240px;
