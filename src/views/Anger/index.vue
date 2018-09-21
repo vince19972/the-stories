@@ -11,7 +11,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'anger-index',
   data () {
@@ -51,17 +50,65 @@ export default {
 <style lang="postcss" scoped>
   @import '_variables';
 
+  .content-margin {
+    margin-bottom: 80px;
+  }
+
   .stories {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   .story-wrapper {
+    position: relative;
     max-width: calc( var(--col-width) * 4);
     margin-bottom: 32px;
+
+    &:before {
+      content: url(../../assets/icon-cross.svg);
+      position: absolute;
+      left: calc(var(--gutter) * -3);
+      top: -24px;
+    }
+    &:nth-child(3n) {
+      &:after {
+        content: url(../../assets/icon-cross.svg);
+        position: absolute;
+        right: calc(var(--gutter) * -3);
+        top: -24px;
+      }
+    }
+    &:nth-last-child(-n+3) {
+      & .story {
+        &:before {
+          content: url(../../assets/icon-cross.svg);
+          position: absolute;
+          left: calc(var(--gutter) * -3);
+          bottom: -40px;
+        }
+      }
+    }
+    &:last-child {
+      & .story {
+        &:after {
+          content: url(../../assets/icon-cross.svg);
+          position: absolute;
+          right: calc(var(--gutter) * -3);
+          bottom: -40px;
+        }
+      }
+    }
   }
   .story {
     font-size: var(--fs-default);
     line-height: var(--line-height-p);
+    opacity: 0.9;
+    transition: .3s;
+
+    &:hover {
+      opacity: 1;
+      color: var(--c-bright);
+      transition: .3s;
+    }
   }
 </style>

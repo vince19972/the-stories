@@ -104,6 +104,12 @@ export default {
   .link {
     font-size: var(--fs-default);
     letter-spacing: var(--letter-space-default);
+    transition: .3s;
+
+    &:hover {
+      color: var(--c-bright);
+      transition: .3s;
+    }
   }
   .sublink {
     font-size: calc(var(--fs-default) - 3px);

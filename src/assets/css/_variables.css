@@ -1,13 +1,15 @@
 :root {
 	/* Primary Color */
 	--dark: black;
-	--light: #F0F0F0;
+	--light: #E1E1E1;
+	--bright: #F5F5F5;
 	--highlight: #FF9B9B;
 
 	/* Secondary Color */
 	--c-default: var(--dark);
 	--c-f-default: var(--light);
 	--c-highlight: var(--highlight);
+	--c-bright: var(--bright);
 
 	/* font */
 	--f-default: 'Libre Baskerville', serif;
