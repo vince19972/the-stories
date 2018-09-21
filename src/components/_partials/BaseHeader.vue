@@ -4,11 +4,29 @@
       <router-link to="/" class="link">THE STORIES</router-link>
     </div>
   </nav>
-  <nav v-else class="-not-home">
+  <nav v-else-if="isEmotionPage" class="-is-emotion-page">
     <div class="container">
       <div class="nav-left">
         <router-link to="/" class="link">THE STORIES: </router-link>
         <span class="link current">{{ currentPage }}</span>
+      </div>
+      <div class="nav-right">
+        <router-link
+          v-for="route in navEmotions"
+          :key="route.id"
+          :to="route"
+          class="sublink"
+        >
+        {{ route }}
+        </router-link>
+      </div>
+    </div>
+  </nav>
+  <nav v-else class="-is-emotion-page">
+    <div class="container">
+      <div class="nav-left">
+        <router-link to="/" class="link">THE STORIES: </router-link>
+        <span class="link current">{{ currentEmotion }}</span>
       </div>
       <div class="nav-right">
         <router-link
@@ -29,9 +47,11 @@ export default {
   name: 'base-header',
   data () {
     return {
+      isEmotionPage: false,
+      isHome: false,
       currentRoute: '/',
       currentPage: '',
-      isHome: true,
+      currentEmotion: '',
       emotions: ['angers', 'cares', 'fears'],
       navEmotions: []
     }
@@ -41,11 +61,15 @@ export default {
       const currentRoute = this.$route.name
       this.currentRoute = currentRoute
 
-      // detect is home or not
+      // detect current page
+      this.isEmotionPage = this.emotions.filter(emotion => currentRoute === emotion).length > 0
       this.isHome = currentRoute === 'home'
 
+      // story page settings
+      if (this.isEmotionPage) this.currentEmotion = currentRoute.toUpperCase()
+
       // change nav sublinks
-      this.navEmotions = this.emotions.filter(emotion => emotion !== currentRoute)
+      this.navEmotions = this.emotions.filter(emotion => emotion !== this.currentEmotion.toLowerCase())
       this.currentPage = this.currentRoute.toUpperCase()
     }
   }
@@ -66,7 +90,7 @@ export default {
       justify-content: center;
     }
   }
-  nav.-not-home {
+  nav.-is-emotion-page {
     & .container {
       justify-content: space-between;
     }
