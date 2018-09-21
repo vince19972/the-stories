@@ -10,7 +10,6 @@
         >
         {{ phrase }}
         </router-link>
-        <a class="phrase" v-for="phrase in phrases" :key="phrase.id">{{ phrase }}</a>
       </div>
     </div>
   </div>
@@ -57,8 +56,14 @@ export default {
     color: var(--c-f-default);
     margin-bottom: 24px;
     margin-right: calc(var(--gutter)*2.2);
+    transition: .5s;
     &:last-child {
       margin-right: 0;
+    }
+
+    &:hover {
+      color: var(--highlight);
+      transition: .5s;
     }
   }
 

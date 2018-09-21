@@ -15,6 +15,7 @@
 	--f-bold: 700;
 	--letter-space-s: 0.8px;
 	--letter-space-default: var(--letter-space-s);
+	--line-height-p: 42px;
 
 	/* container */
 	--wrapper: 1240px;
@@ -22,6 +23,7 @@
 	--wrapper-default: var(--wrapper-ratio);
 	--gutter: 24px;
 	--content-margin: 88px;
+	--col-width: calc((var(--wrapper-default) - (var(--gutter)*11))/12);
 
 	/* partials */
 	--header-height: 104px;

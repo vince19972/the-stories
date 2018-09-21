@@ -8,7 +8,7 @@
     <div class="container">
       <div class="nav-left">
         <router-link to="/" class="link">THE STORIES: </router-link>
-        <span class="link current">{{ currentPage }}</span>
+        <router-link :to="'/' + currentPage" class="link current">{{ currentPage }}</router-link>
       </div>
       <div class="nav-right">
         <router-link
@@ -26,13 +26,13 @@
     <div class="container">
       <div class="nav-left">
         <router-link to="/" class="link">THE STORIES: </router-link>
-        <span class="link current">{{ currentEmotion }}</span>
+        <router-link :to="'/' + currentEmotion" class="link current">{{ currentEmotion }}</router-link>
       </div>
       <div class="nav-right">
         <router-link
           v-for="route in navEmotions"
           :key="route.id"
-          :to="route"
+          :to="'/' + route"
           class="sublink"
         >
         {{ route }}
@@ -109,7 +109,7 @@ export default {
     font-size: calc(var(--fs-default) - 3px);
     letter-spacing: var(--letter-space-default);
     margin-right: var(--gutter);
-    opacity: 0.8;
+    opacity: 0.9;
     transition: .3s;
 
     &:hover {
