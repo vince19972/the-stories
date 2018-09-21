@@ -32,9 +32,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "cares" */ './views/Cares.vue')
     },
     {
-      path: '/angers/:story',
-      name: 'anger-index',
+      path: '/angers/:stories',
+      name: 'anger-stories',
       component: () => import(/* webpackChunkName: "cares" */ './views/Anger/index.vue')
+    },
+    {
+      path: '/angers/:stories/:story',
+      name: 'anger-story',
+      component: () => import(/* webpackChunkName: "cares" */ './views/Anger/story/index.vue')
     }
   ]
 })
