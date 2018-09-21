@@ -1,0 +1,13 @@
+@import '_reset';
+@import '_variables';
+
+html, body, .app {
+	font-family: var(--f-default);
+	background-color: var(--c-default);
+	color: var(--c-f-default);
+}
+
+.container {
+	max-width: var(--wrapper-default);
+	margin: 0 auto;
+}

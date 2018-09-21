@@ -1,0 +1,37 @@
+:root {
+	/* Primary Color */
+	--dark: black;
+	--light: #F5F5F5;
+	--highlight: #FFA8A8;
+
+	/* Secondary Color */
+	--c-default: var(--dark);
+	--c-f-default: var(--light);
+	--c-highlight: var(--highlight);
+
+	/* font */
+	--f-default: 'Libre Baskerville', serif;
+
+	/* container */
+	--wrapper: 1240px;
+	--wrapper-ratio: 80vw;
+	--wrapper-default: var(--wrapper-ratio);
+	--gutter: 24px;
+
+	/* partials */
+	--header-height: 104px;
+}
+
+@custom-media --below-large (width <= 1600px);
+@custom-media --below-medium (width <= 1280px);
+@custom-media --below-desktop (width <= 1024px);
+@custom-media --below-small (width <= 850px);
+@custom-media --below-tablet (width <= 768px);
+@custom-media --below-mobile (width <= 550px);
+
+@custom-media --above-large (width > 1600px);
+@custom-media --above-medium (width > 1280px);
+@custom-media --above-desktop (width > 1024px);
+@custom-media --above-small (width > 850px);
+@custom-media --above-tablet (width > 768px);
+@custom-media --above-mobile (width > 550px);
