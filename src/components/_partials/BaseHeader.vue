@@ -7,7 +7,8 @@
   <nav v-else class="-not-home">
     <div class="container">
       <div class="nav-left">
-        <router-link to="/" class="link">THE STORIES</router-link>
+        <router-link to="/" class="link">THE STORIES: </router-link>
+        <span class="link current">{{ currentPage }}</span>
       </div>
       <div class="nav-right">
         <router-link
@@ -29,6 +30,7 @@ export default {
   data () {
     return {
       currentRoute: '/',
+      currentPage: '',
       isHome: true,
       emotions: ['angers', 'cares', 'fears'],
       navEmotions: []
@@ -37,11 +39,14 @@ export default {
   watch: {
     '$route' (to, from) {
       const currentRoute = this.$route.name
+      this.currentRoute = currentRoute
+
       // detect is home or not
       this.isHome = currentRoute === 'home'
 
       // change nav sublinks
       this.navEmotions = this.emotions.filter(emotion => emotion !== currentRoute)
+      this.currentPage = this.currentRoute.toUpperCase()
     }
   }
 }
@@ -64,6 +69,11 @@ export default {
   nav.-not-home {
     & .container {
       justify-content: space-between;
+    }
+  }
+  .nav-left {
+    & .current {
+      font-weight: var(--f-bold);
     }
   }
 

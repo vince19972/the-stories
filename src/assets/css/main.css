@@ -5,12 +5,17 @@ html, body, .app {
 	font-family: var(--f-default);
 	background-color: var(--c-default);
 	color: var(--c-f-default);
+	overflow-x: hidden;
 }
 
 .container {
 	width: var(--wrapper-default);
 	max-width: var(--wrapper-default);
 	margin: 0 auto;
+}
+
+.content-margin {
+	margin-top: var(--content-margin);
 }
 
 a {

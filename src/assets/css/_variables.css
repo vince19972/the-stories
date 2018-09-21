@@ -12,6 +12,7 @@
 	/* font */
 	--f-default: 'Libre Baskerville', serif;
 	--fs-default: 24px;
+	--f-bold: 700;
 	--letter-space-s: 0.8px;
 	--letter-space-default: var(--letter-space-s);
 
@@ -20,6 +21,7 @@
 	--wrapper-ratio: 80vw;
 	--wrapper-default: var(--wrapper-ratio);
 	--gutter: 24px;
+	--content-margin: 88px;
 
 	/* partials */
 	--header-height: 104px;

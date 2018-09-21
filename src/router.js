@@ -30,6 +30,11 @@ export default new Router({
       path: '/cares',
       name: 'cares',
       component: () => import(/* webpackChunkName: "cares" */ './views/Cares.vue')
+    },
+    {
+      path: '/angers/:story',
+      name: 'anger-index',
+      component: () => import(/* webpackChunkName: "cares" */ './views/Anger/index.vue')
     }
   ]
 })
