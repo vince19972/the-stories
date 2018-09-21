@@ -24,22 +24,22 @@ export default new Router({
     {
       path: '/fears',
       name: 'fears',
-      component: () => import(/* webpackChunkName: "fears" */ './views/Fears.vue')
+      component: () => import('./views/Fears.vue')
     },
     {
       path: '/cares',
       name: 'cares',
-      component: () => import(/* webpackChunkName: "cares" */ './views/Cares.vue')
+      component: () => import('./views/Cares.vue')
     },
     {
       path: '/angers/:stories',
       name: 'anger-stories',
-      component: () => import(/* webpackChunkName: "cares" */ './views/Anger/index.vue')
+      component: () => import('./views/Anger/index.vue')
     },
     {
       path: '/angers/:stories/:story',
       name: 'anger-story',
-      component: () => import(/* webpackChunkName: "cares" */ './views/Anger/story/index.vue')
+      component: () => import('./views/Anger/story/index.vue')
     }
   ]
 })

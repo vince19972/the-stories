@@ -9,11 +9,6 @@
 import BaseHeader from '@/components/_partials/BaseHeader.vue'
 
 export default {
-  data () {
-    return {
-      test: 'test'
-    }
-  },
   components: {
     BaseHeader
   }

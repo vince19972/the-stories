@@ -21,6 +21,9 @@ import { mapState } from 'vuex'
 export default {
   name: 'anger-stories',
   computed: {
+    ...mapState({
+      storiesStore: state => state.anger.stories
+    }),
     fmtStory () {
       return this.storiesStore.map(({ story, id_href: idHref, category }) => {
         // fmt story paragraph
@@ -30,16 +33,14 @@ export default {
           if (splitedStr.reverse()[i] === ' ') break
           extraCharsCount += 1
         }
+
         return {
           fmted: splitedStr.reverse().slice(0, (splitedStr.length - extraCharsCount)).join('') + '...',
           idHref: idHref,
           category: category
         }
       })
-    },
-    ...mapState({
-      storiesStore: state => state.anger.stories
-    })
+    }
   }
 }
 </script>
