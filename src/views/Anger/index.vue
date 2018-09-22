@@ -3,9 +3,7 @@
     <div class="content-margin">
       <div class="stories">
         <div v-for="story in fmtStory" :key="story.idHref" class="story-wrapper">
-          <a class="story" :href="story.reference">
-          {{ story.fmted }}
-          </a>
+          <a :href="story.reference" class="story" target="blank"> {{ story.fmted }} </a>
         </div>
       </div>
     </div>
@@ -46,6 +44,13 @@ export default {
 <style lang="postcss" scoped>
   @import '_variables';
 
+  :root {
+    --cross-x: -12%;
+    --cross-y: -12%;
+    --cross-x-m: -12%;
+    --cross-last-y: -24%;
+  }
+
   .content-margin {
     margin-bottom: 80px;
   }
@@ -54,33 +59,57 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media(--below-medium) { justify-content: space-around; }
+    @media(--below-tablet) { justify-content: space-between; }
   }
   .story-wrapper {
     position: relative;
-    max-width: calc( var(--col-width) * 4);
-    margin-bottom: 32px;
+    width: 30%;
+    max-width: 30%;
+    margin-bottom: 56px;
+
+    @media(--below-medium) {
+      width: 40%;
+      max-width: 40%;
+    }
+    @media(--below-tablet) {
+      width: 70%;
+      max-width: 70%;
+    }
+    @media(--below-mobile) {
+      width: 100%;
+      max-width: 100%;
+    }
 
     &:before {
       content: url(../../assets/icon-cross.svg);
       position: absolute;
-      left: calc(var(--gutter) * -3);
-      top: -24px;
-    }
-    &:nth-child(3n) {
-      &:after {
-        content: url(../../assets/icon-cross.svg);
-        position: absolute;
-        right: calc(var(--gutter) * -3);
-        top: -24px;
-      }
+      left: var(--cross-x);
+      top: var(--cross-y);
+      @media(--below-tablet) { display: none; }
     }
     &:nth-last-child(-n+3) {
       & .story {
         &:before {
           content: url(../../assets/icon-cross.svg);
           position: absolute;
-          left: calc(var(--gutter) * -3);
-          bottom: -40px;
+          left: var(--cross-x);
+          bottom: var(--cross-last-y);
+          @media(--below-medium) { display: none; }
+        }
+      }
+    }
+    &:nth-last-child(-n+2) {
+      & .story {
+        &:before {
+          @media(--below-medium) {
+            content: url(../../assets/icon-cross.svg);
+            position: absolute;
+            left: var(--cross-x);
+            bottom: var(--cross-last-y);
+          }
+          @media(--below-tablet) { display: none; }
         }
       }
     }
@@ -89,9 +118,49 @@ export default {
         &:after {
           content: url(../../assets/icon-cross.svg);
           position: absolute;
-          right: calc(var(--gutter) * -3);
-          bottom: -40px;
+          right: var(--cross-x);
+          bottom: var(--cross-last-y);
+          @media(--below-tablet) { display: none; }
         }
+      }
+    }
+    &:nth-child(2n) {
+      &:after {
+        @media(--below-medium) {
+          content: url(../../assets/icon-cross.svg);
+          position: absolute;
+          right: var(--cross-x);
+          top: var(--cross-y);
+        }
+        @media(--below-tablet) {
+          content: '';
+          right: auto;
+          top: auto;
+        }
+      }
+    }
+    &:nth-child(3n) {
+      &:after {
+        content: url(../../assets/icon-cross.svg);
+        position: absolute;
+        right: var(--cross-x);
+        top: var(--cross-y);
+        @media(--below-medium) {
+          content: '';
+          right: auto;
+          top: auto;
+        }
+      }
+    }
+    &:after {
+      @media(--below-tablet) {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -30px;
+        width: 12px;
+        height: 1px;
+        background-color: var(--highlight);
       }
     }
   }
@@ -105,6 +174,11 @@ export default {
       opacity: 1;
       color: var(--c-bright);
       transition: .3s;
+    }
+
+    @media(--below-medium) {
+      font-size: var(--fs-desktop);
+      line-height: var(--line-height-desktop);
     }
   }
 </style>

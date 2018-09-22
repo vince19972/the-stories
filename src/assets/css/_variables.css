@@ -15,10 +15,12 @@
 	/* font */
 	--f-default: 'Libre Baskerville', serif;
 	--fs-default: 24px;
+	--fs-desktop: 16px;
 	--f-bold: 700;
 	--letter-space-s: 0.8px;
 	--letter-space-default: var(--letter-space-s);
 	--line-height-p: 42px;
+	--line-height-desktop: 34px;
 
 	/* container */
 	--wrapper: 1240px;
@@ -28,10 +30,11 @@
 	--gutter: 24px;
 	--content-margin: 6.5vh;
 	--col-width: calc((var(--wrapper-default) - (var(--gutter)*11))/12);
+	--col-width-fixed: calc((var(--wrapper) - (var(--gutter)*11))/12);
 
 	/* partials */
-	--header-height: 12vh;
-	--header-height-mobile: 8vh;
+	--header-height: 12vw;
+	--header-height-mobile: 12vw;
 }
 
 @custom-media --below-large (width <= 1600px);

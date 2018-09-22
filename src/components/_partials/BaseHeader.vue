@@ -61,13 +61,9 @@ export default {
       const currentRoute = this.$route.name
       this.currentRoute = currentRoute
 
-      console.log(this.$route)
-
       // detect current page
       this.isEmotionPage = this.emotions.filter(emotion => currentRoute === emotion).length > 0
       this.isHome = currentRoute === 'home'
-
-      console.log(this.isHome)
 
       // story page settings
       if (this.isEmotionPage) this.currentEmotion = currentRoute.toUpperCase()
