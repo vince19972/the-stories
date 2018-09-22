@@ -23,6 +23,7 @@
 	/* container */
 	--wrapper: 1240px;
 	--wrapper-ratio: 80vw;
+	--wrapper-ratio-m: 88vw;
 	--wrapper-default: var(--wrapper-ratio);
 	--gutter: 24px;
 	--content-margin: 88px;
@@ -30,7 +31,7 @@
 
 	/* partials */
 	--header-height: 12vh;
-	--header-height-mobile: 6vh;
+	--header-height-mobile: 8vh;
 }
 
 @custom-media --below-large (width <= 1600px);

@@ -83,6 +83,12 @@ export default {
 <style scoped>
   @import '_variables';
 
+  :root {
+    --logo-size: 1.5vw;
+    --logo-size-m: 2.5vw;
+    --logo-size-s: 3vw;
+  }
+
   nav {
     width: 100vw;
     height: var(--header-height);
@@ -111,7 +117,7 @@ export default {
   }
 
   .link {
-    font-size: 2vw;
+    font-size: var(--logo-size);
     letter-spacing: var(--letter-space-default);
     transition: .3s;
 
@@ -120,11 +126,11 @@ export default {
       transition: .3s;
     }
 
-    @media(--below-desktop) { font-size: 2vw; }
-    @media(--below-tablet) { font-size: 2vw; }
+    @media(--below-desktop) { font-size: var(--logo-size-m); }
+    @media(--below-tablet) { font-size: var(--logo-size-s); }
   }
   .sublink {
-    font-size: 2vw;
+    font-size: var(--logo-size);
     letter-spacing: var(--letter-space-default);
     margin-right: var(--gutter);
     opacity: 0.9;
@@ -136,9 +142,9 @@ export default {
     }
     &:last-child { margin-right: 0; }
 
-    @media(--below-desktop) { font-size: 2vw; }
+    @media(--below-desktop) { font-size: var(--logo-size-m); }
     @media(--below-tablet) {
-      font-size: 2vw;
+      font-size: var(--logo-size-s);
       margin-right: 8px;
     }
   }

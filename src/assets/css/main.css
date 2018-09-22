@@ -23,6 +23,11 @@ body::-webkit-scrollbar-thumb {
 	width: var(--wrapper-default);
 	max-width: var(--wrapper-default);
 	margin: 0 auto;
+
+	@media(--below-desktop) {
+		width: var(--wrapper-ratio-m);
+		max-width: var(--wrapper-ratio-m);
+	}
 }
 
 .content-margin {

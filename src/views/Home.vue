@@ -1,15 +1,9 @@
 <template>
   <div class="container">
     <div class="main">
-      <div class="main__wrapper">
-        <entry-phrase title="cares"></entry-phrase>
-      </div>
-      <div class="main__wrapper">
-        <entry-phrase title="angers"></entry-phrase>
-      </div>
-      <div class="main__wrapper">
-        <entry-phrase title="fears"></entry-phrase>
-      </div>
+      <entry-phrase title="cares"></entry-phrase>
+      <entry-phrase title="angers"></entry-phrase>
+      <entry-phrase title="fears"></entry-phrase>
     </div>
   </div>
 </template>
@@ -34,21 +28,18 @@ export default {
     justify-content: space-between;
     align-items: center;
     height: calc(100vh - var(--header-height));
-
-    & .main__wrapper {
-      margin-top: -96px;
-    }
+    margin-top: -4%;
 
     @media(--below-desktop) {
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-end;
-      padding-bottom: 8%;
-
-      & .main__wrapper {
-        margin-top: 0;
-      }
+      padding-bottom: 4%;
     }
     @media(--below-mobile) { padding-bottom: 2%; }
+  }
+
+  .copy {
+    text-align: right;
   }
 </style>

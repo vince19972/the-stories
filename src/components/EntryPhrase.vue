@@ -1,6 +1,6 @@
 <template>
-  <router-link :to="'/' + title" class="wrapper">
-    <h1 class="title">{{ title }}</h1>
+  <router-link :to="'/' + title" :class="['title', keyTitle]">
+    {{ title }}
   </router-link>
 </template>
 
@@ -12,6 +12,11 @@ export default {
       type: String,
       required: true
     }
+  },
+  computed: {
+    keyTitle () {
+      return this.title
+    }
   }
 }
 </script>
@@ -20,8 +25,9 @@ export default {
   @import '_variables';
 
   .title {
+    display: block;
     font-family: var(--f-default);
-    font-size: 8vw;
+    font-size: 6.5vw;
     color: var(--c-f-default);
     transition: color 1s;
 
@@ -32,7 +38,11 @@ export default {
 
     @media(--below-desktop) {
       font-size: 18vw;
-      margin-bottom: 1vh;
+      line-height: 21vw;
+
+      &.cares {
+        margin-bottom: -2.5vw;
+      }
     }
   }
 </style>
