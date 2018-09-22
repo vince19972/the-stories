@@ -7,15 +7,10 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "serve:bs": "vue-cli-service serve:bs",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "dependencies": {
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "webpack-hot-middleware": "^2.24.2"
-  },
-  "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.3",
     "@vue/cli-plugin-eslint": "^3.0.3",
     "@vue/cli-service": "^3.0.3",
@@ -31,6 +26,12 @@
     "postcss-import": "^12.0.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "webpack-hot-middleware": "^2.24.2"
+  },
+  "devDependencies": {
     "serve-static": "^1.13.2",
     "vue-cli-plugin-browser-sync": "^1.0.0-rc2",
     "vue-template-compiler": "^2.5.17"
