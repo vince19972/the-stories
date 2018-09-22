@@ -1,6 +1,7 @@
 :root {
 	/* Primary Color */
 	--dark: black;
+	--gray: #9B9B9B;
 	--light: #E1E1E1;
 	--bright: #F5F5F5;
 	--highlight: #FF9B9B;
