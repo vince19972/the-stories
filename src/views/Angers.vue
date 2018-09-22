@@ -6,8 +6,7 @@
         <router-link
           class="phrase"
           v-for="phrase in phrases" :key="phrase.id"
-          :to="'/angers/' + phraseLink(phrase)"
-        >
+          :to="'/angers/' + phraseLink(phrase)">
         {{ phrase }}
         </router-link>
       </div>
