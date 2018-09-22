@@ -26,7 +26,7 @@
 	--wrapper-ratio-m: 88vw;
 	--wrapper-default: var(--wrapper-ratio);
 	--gutter: 24px;
-	--content-margin: 88px;
+	--content-margin: 6.5vh;
 	--col-width: calc((var(--wrapper-default) - (var(--gutter)*11))/12);
 
 	/* partials */
