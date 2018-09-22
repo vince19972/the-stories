@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <button class="arrow -left" @click="updateCount('prev', carousel.current_id)">
+      <img src="../assets/icon-arrow.svg" alt="arrow-left">
+    </button>
     <div class="carousel">
       <div
         v-for="(story, index) in stories" :key="story.id"
@@ -8,6 +11,9 @@
         <p class="carousel__content">{{story}}</p>
       </div>
     </div>
+    <button class="arrow -right" @click="updateCount('next', carousel.current_id)">
+      <img src="../assets/icon-arrow.svg" alt="arrow-right">
+    </button>
   </div>
 </template>
 
@@ -37,9 +43,9 @@ export default {
       const isNext = keyName === arrows.right || keyName === arrows.down
 
       if (isPrev) {
-        this.carousel.current_id = this.updateCount('prev', currentId)
+        this.updateCount('prev', currentId)
       } else if (isNext) {
-        this.carousel.current_id = this.updateCount('next', currentId)
+        this.updateCount('next', currentId)
       }
     })
   },
@@ -59,15 +65,17 @@ export default {
         prev_threshold: currentId === 0 && direction === 'prev',
         next_safe: currentId < carouselCount - 1 && direction === 'next'
       }
+      let newCount = 0
 
       if (conditions.prev_safe) {
-        return currentId - 1
+        newCount = currentId - 1
       } else if (conditions.next_safe) {
-        return currentId + 1
+        newCount = currentId + 1
       } else if (conditions.prev_threshold) {
-        return carouselCount - 1
+        newCount = carouselCount - 1
       }
-      return 0
+
+      this.carousel.current_id = newCount
     }
   }
 }
@@ -80,12 +88,42 @@ export default {
     --carousel-fs: 64px;
   }
 
+  .container {
+    position: relative;
+  }
+
+  .arrow {
+    position: absolute;
+    bottom: 50%;
+    z-index: 2;
+    opacity: .6;
+    transition: .3s;
+    padding: 16px;
+
+    &.-left {
+      left: -5%;
+      &:hover { transform: translateX(-8px); }
+    }
+    &.-right {
+      right: -5%;
+      transform: rotate(180deg);
+      &:hover { transform: rotate(180deg) translateX(-8px); }
+    }
+    &:hover {
+      opacity: 1;
+      transition: .3s;
+    }
+
+    & img {
+      width: 32px;
+    }
+  }
+
   .carousel {
     position: relative;
     text-align: center;
     height: calc(100vh - var(--header-height));
   }
-
   .carousel__item {
     position: absolute;
     top: 0;
@@ -97,14 +135,13 @@ export default {
     text-align: center;
 
     opacity: 0;
-    transition: .3s;
+    transition: 1s;
 
     &.-is-active {
       opacity: 1;
-      transition: .3s;
+      transition: 1s;
     }
   }
-
   .carousel__content {
     font-size: var(--carousel-fs);
   }
