@@ -48,7 +48,7 @@ export default {
   data () {
     return {
       isEmotionPage: false,
-      isHome: false,
+      isHome: true,
       currentRoute: '/',
       currentPage: '',
       currentEmotion: '',
