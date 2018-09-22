@@ -93,7 +93,8 @@ export default {
   @import '_variables';
 
   :root {
-    --carousel-fs: 64px;
+    --carousel-fs: 5vw;
+    --carousel-fs-m: 6.5vw;
   }
 
   .container {
@@ -108,14 +109,22 @@ export default {
     transition: .3s;
     padding: 16px;
 
+    @media(--below-tablet) { opacity: 1; }
+
     &.-left {
       left: -5%;
-      &:hover { transform: translateX(-8px); }
+      @media(--above-tablet) {
+        &:hover { transform: translateX(-8px); }
+      }
+      @media(--below-tablet) { left: -8%; }
     }
     &.-right {
       right: -5%;
       transform: rotate(180deg);
-      &:hover { transform: rotate(180deg) translateX(-8px); }
+      @media(--above-tablet) {
+        &:hover { transform: rotate(180deg) translateX(-8px); }
+      }
+      @media(--below-tablet) { right: -8%; }
     }
     &:hover {
       opacity: 1;
@@ -124,6 +133,8 @@ export default {
 
     & img {
       width: 32px;
+
+      @media(--below-tablet) { width: 24px; }
     }
   }
 
@@ -152,5 +163,6 @@ export default {
   }
   .carousel__content {
     font-size: var(--carousel-fs);
+    @media(--below-tablet) { font-size: var(--carousel-fs-m); }
   }
 </style>

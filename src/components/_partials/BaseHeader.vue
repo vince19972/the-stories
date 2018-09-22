@@ -82,6 +82,7 @@ export default {
   :root {
     --logo-size: 24px;
     --logo-size-m: 16px;
+    --logo-size-s: 14px;
   }
 
   nav {
@@ -122,6 +123,7 @@ export default {
     }
 
     @media(--below-desktop) { font-size: var(--logo-size-m); }
+    @media(--below-mobile) { font-size: var(--logo-size-s);}
   }
   .sublink {
     font-size: var(--logo-size);
@@ -138,6 +140,7 @@ export default {
 
     @media(--below-desktop) { font-size: var(--logo-size-m); }
     @media(--below-small) { margin-right: 8px; }
+    @media(--below-mobile) { font-size: var(--logo-size-s);}
   }
 
   .fade-enter-active {
