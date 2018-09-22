@@ -10,3 +10,7 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+// touch plugin
+const VueTouch = require('vue-touch')
+Vue.use(VueTouch, { name: 'v-touch' })

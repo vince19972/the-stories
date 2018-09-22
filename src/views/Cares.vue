@@ -1,19 +1,24 @@
 <template>
   <div class="container">
-    <button class="arrow -left" @click="updateCount('prev', carousel.current_id)">
-      <img src="../assets/icon-arrow.svg" alt="arrow-left">
-    </button>
-    <div class="carousel">
-      <div
-        v-for="(story, index) in stories" :key="story.id"
-        :class="['carousel__item', {'-is-active': carousel.current_id === index}]"
-      >
-        <p class="carousel__content">{{story}}</p>
+    <v-touch
+      @swipeleft="updateCount('prev', carousel.current_id)"
+      @swiperight="updateCount('next', carousel.current_id)"
+    >
+      <button class="arrow -left" @click="updateCount('prev', carousel.current_id)">
+        <img src="../assets/icon-arrow.svg" alt="arrow-left">
+      </button>
+      <div class="carousel">
+        <div
+          v-for="(story, index) in stories" :key="story.id"
+          :class="['carousel__item', {'-is-active': carousel.current_id === index}]"
+        >
+          <p class="carousel__content">{{story}}</p>
+        </div>
       </div>
-    </div>
-    <button class="arrow -right" @click="updateCount('next', carousel.current_id)">
-      <img src="../assets/icon-arrow.svg" alt="arrow-right">
-    </button>
+      <button class="arrow -right" @click="updateCount('next', carousel.current_id)">
+        <img src="../assets/icon-arrow.svg" alt="arrow-right">
+      </button>
+    </v-touch>
   </div>
 </template>
 
@@ -76,6 +81,9 @@ export default {
       }
 
       this.carousel.current_id = newCount
+    },
+    test () {
+      console.log('swipe')
     }
   }
 }
