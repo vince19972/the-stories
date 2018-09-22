@@ -38,5 +38,17 @@ export default {
     & .main__wrapper {
       margin-top: -96px;
     }
+
+    @media(--below-desktop) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding-bottom: 8%;
+
+      & .main__wrapper {
+        margin-top: 0;
+      }
+    }
+    @media(--below-mobile) { padding-bottom: 2%; }
   }
 </style>

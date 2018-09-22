@@ -61,9 +61,13 @@ export default {
       const currentRoute = this.$route.name
       this.currentRoute = currentRoute
 
+      console.log(this.$route)
+
       // detect current page
       this.isEmotionPage = this.emotions.filter(emotion => currentRoute === emotion).length > 0
       this.isHome = currentRoute === 'home'
+
+      console.log(this.isHome)
 
       // story page settings
       if (this.isEmotionPage) this.currentEmotion = currentRoute.toUpperCase()
@@ -87,25 +91,27 @@ export default {
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
     }
+
+    @media(--below-mobile) { height: var(--header-height-mobile); }
   }
   .wrapper {
     width: 100%;
-  }
-  .-is-emotion-page {
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    @media(--below-desktop) { justify-content: flex-start; }
+  }
+  .-is-emotion-page {
     justify-content: space-between;
   }
   .nav-left {
-    & .current {
-      font-weight: var(--f-bold);
-    }
+    & .current { font-weight: var(--f-bold); }
   }
 
   .link {
-    font-size: var(--fs-default);
+    font-size: 2.5vw;
     letter-spacing: var(--letter-space-default);
     transition: .3s;
 
@@ -113,9 +119,12 @@ export default {
       color: var(--c-bright);
       transition: .3s;
     }
+
+    @media(--below-desktop) { font-size: 2vw; }
+    @media(--below-tablet) { font-size: 2.5vw; }
   }
   .sublink {
-    font-size: calc(var(--fs-default) - 3px);
+    font-size: 2.5vw;
     letter-spacing: var(--letter-space-default);
     margin-right: var(--gutter);
     opacity: 0.9;
@@ -125,8 +134,12 @@ export default {
       opacity: 1;
       transition: .3s;
     }
-    &:last-child {
-      margin-right: 0;
+    &:last-child { margin-right: 0; }
+
+    @media(--below-desktop) { font-size: 2vw; }
+    @media(--below-tablet) {
+      font-size: 2.5vw;
+      margin-right: 8px;
     }
   }
 

@@ -21,13 +21,18 @@ export default {
 
   .title {
     font-family: var(--f-default);
-    font-size: 120px;
+    font-size: 8vw;
     color: var(--c-f-default);
-    transition: 1s;
+    transition: color 1s;
 
     &:hover {
       color: var(--c-highlight);
-      transition: .5s;
+      transition: color .5s;
+    }
+
+    @media(--below-desktop) {
+      font-size: 18vw;
+      margin-bottom: 1vh;
     }
   }
 </style>

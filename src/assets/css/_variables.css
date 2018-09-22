@@ -29,7 +29,8 @@
 	--col-width: calc((var(--wrapper-default) - (var(--gutter)*11))/12);
 
 	/* partials */
-	--header-height: 104px;
+	--header-height: 12vh;
+	--header-height-mobile: 6vh;
 }
 
 @custom-media --below-large (width <= 1600px);

@@ -51,19 +51,29 @@ export default {
     flex-wrap: wrap;
   }
   .phrase {
-    font-size: 96px;
+    font-size: 6vw;
     font-weight: var(--f-bold);
     color: var(--c-f-default);
-    margin-bottom: 24px;
-    margin-right: calc(var(--gutter)*2.2);
+    margin-bottom: 1vw;
+    margin-right: 3vw;
     transition: .5s;
     &:last-child {
       margin-right: 0;
     }
-
     &:hover {
       color: var(--highlight);
       transition: .5s;
+    }
+
+    @media(--below-medium) { margin-bottom: 1.5vw; }
+    @media(--below-desktop) {
+      margin-bottom: 2vw;
+      margin-right: 4vw;
+    }
+    @media(--below-tablet) { font-size: 8vw; }
+    @media(--below-mobile) {
+      font-size: 6vw;
+      margin-bottom: 2.5vw;
     }
   }
 
