@@ -152,6 +152,37 @@ export default new Vuex.Store({
           reference: 'https://google.com'
         }
       ]
+    },
+    care: {
+      stories: [
+        {
+          story: 'ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+        },
+        {
+          story: 'ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+        },
+        {
+          story: 'ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+        },
+        {
+          story: 'ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+        },
+        {
+          story: 'ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+        },
+        {
+          story: 'ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+        },
+        {
+          story: 'ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+        },
+        {
+          story: 'ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+        },
+        {
+          story: 'ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+        }
+      ]
     }
   },
   mutations: {
