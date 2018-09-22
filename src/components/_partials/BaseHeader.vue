@@ -80,9 +80,8 @@ export default {
   @import '_variables';
 
   :root {
-    --logo-size: 1.5vw;
-    --logo-size-m: 2.5vw;
-    --logo-size-s: 3vw;
+    --logo-size: 24px;
+    --logo-size-m: 16px;
   }
 
   nav {
@@ -123,7 +122,6 @@ export default {
     }
 
     @media(--below-desktop) { font-size: var(--logo-size-m); }
-    @media(--below-tablet) { font-size: var(--logo-size-s); }
   }
   .sublink {
     font-size: var(--logo-size);
@@ -139,10 +137,7 @@ export default {
     &:last-child { margin-right: 0; }
 
     @media(--below-desktop) { font-size: var(--logo-size-m); }
-    @media(--below-tablet) {
-      font-size: var(--logo-size-s);
-      margin-right: 8px;
-    }
+    @media(--below-small) { margin-right: 8px; }
   }
 
   .fade-enter-active {

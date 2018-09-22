@@ -33,6 +33,7 @@ body::-webkit-scrollbar-thumb {
 
 .content-margin {
 	margin-top: var(--content-margin);
+	@media(--below-small) { margin-top: var(--content-margin-m); }
 }
 
 a {
