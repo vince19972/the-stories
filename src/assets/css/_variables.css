@@ -33,8 +33,8 @@
 	--col-width-fixed: calc((var(--wrapper) - (var(--gutter)*11))/12);
 
 	/* partials */
-	--header-height: 12vw;
-	--header-height-mobile: 12vw;
+	--header-height: 96px;
+	--header-height-mobile: 64px;
 }
 
 @custom-media --below-large (width <= 1600px);
