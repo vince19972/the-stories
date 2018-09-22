@@ -111,7 +111,7 @@ export default {
   }
 
   .link {
-    font-size: 2.5vw;
+    font-size: 2vw;
     letter-spacing: var(--letter-space-default);
     transition: .3s;
 
@@ -121,10 +121,10 @@ export default {
     }
 
     @media(--below-desktop) { font-size: 2vw; }
-    @media(--below-tablet) { font-size: 2.5vw; }
+    @media(--below-tablet) { font-size: 2vw; }
   }
   .sublink {
-    font-size: 2.5vw;
+    font-size: 2vw;
     letter-spacing: var(--letter-space-default);
     margin-right: var(--gutter);
     opacity: 0.9;
@@ -138,7 +138,7 @@ export default {
 
     @media(--below-desktop) { font-size: 2vw; }
     @media(--below-tablet) {
-      font-size: 2.5vw;
+      font-size: 2vw;
       margin-right: 8px;
     }
   }
