@@ -1,43 +1,43 @@
 <template>
-  <nav v-if="isHome">
+  <nav>
     <div class="container">
-      <router-link to="/" class="link">THE STORIES</router-link>
-    </div>
-  </nav>
-  <nav v-else-if="isEmotionPage" class="-is-emotion-page">
-    <div class="container">
-      <div class="nav-left">
-        <router-link to="/" class="link">THE STORIES: </router-link>
-        <router-link :to="'/' + currentPage" class="link current">{{ currentPage }}</router-link>
-      </div>
-      <div class="nav-right">
-        <router-link
-          v-for="route in navEmotions"
-          :key="route.id"
-          :to="route"
-          class="sublink"
-        >
-        {{ route }}
-        </router-link>
-      </div>
-    </div>
-  </nav>
-  <nav v-else class="-is-emotion-page">
-    <div class="container">
-      <div class="nav-left">
-        <router-link to="/" class="link">THE STORIES: </router-link>
-        <router-link :to="'/' + currentEmotion" class="link current">{{ currentEmotion }}</router-link>
-      </div>
-      <div class="nav-right">
-        <router-link
-          v-for="route in navEmotions"
-          :key="route.id"
-          :to="'/' + route"
-          class="sublink"
-        >
-        {{ route }}
-        </router-link>
-      </div>
+      <transition name="fade">
+        <div v-if="isHome" key="home" class="wrapper">
+          <router-link to="/" class="link">THE STORIES</router-link>
+        </div>
+        <div v-else-if="isEmotionPage" key="emotion" class="wrapper -is-emotion-page">
+          <div class="nav-left">
+            <router-link to="/" class="link">THE STORIES: </router-link>
+            <router-link :to="'/' + currentPage" class="link current">{{ currentPage }}</router-link>
+          </div>
+          <div class="nav-right">
+            <router-link
+              v-for="route in navEmotions"
+              :key="route.id"
+              :to="route"
+              class="sublink"
+            >
+            {{ route }}
+            </router-link>
+          </div>
+        </div>
+        <div v-else key="story" class="wrapper -is-emotion-page">
+          <div class="nav-left">
+            <router-link to="/" class="link">THE STORIES: </router-link>
+            <router-link :to="'/' + currentEmotion" class="link current">{{ currentEmotion }}</router-link>
+          </div>
+          <div class="nav-right">
+            <router-link
+              v-for="route in navEmotions"
+              :key="route.id"
+              :to="'/' + route"
+              class="sublink"
+            >
+            {{ route }}
+            </router-link>
+          </div>
+        </div>
+      </transition>
     </div>
   </nav>
 </template>
@@ -90,10 +90,13 @@ export default {
       justify-content: center;
     }
   }
-  nav.-is-emotion-page {
-    & .container {
-      justify-content: space-between;
-    }
+  .wrapper {
+    width: 100%;
+  }
+  .-is-emotion-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .nav-left {
     & .current {
@@ -125,5 +128,16 @@ export default {
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .fade-enter-active {
+    transition: all .8s ease-out;
+  }
+  .fade-leave-active {
+    display: none;
+    transition: all .1s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 </style>

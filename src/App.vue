@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <base-header></base-header>
-    <router-view></router-view>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -20,4 +22,14 @@ export default {
 @import '_variables';
 @import 'main';
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
+
+.fade-enter-active {
+  transition: all 1.2s ease-out;
+}
+.fade-leave-active {
+  transition: all .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 </style>
