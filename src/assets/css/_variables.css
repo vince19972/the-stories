@@ -30,6 +30,7 @@
 	--gutter: 24px;
 	--content-margin: 8vw;
 	--content-margin-m: 9vw;
+	--content-margin-s: 48px;
 	--col-width: calc((var(--wrapper-default) - (var(--gutter)*11))/12);
 	--col-width-fixed: calc((var(--wrapper) - (var(--gutter)*11))/12);
 

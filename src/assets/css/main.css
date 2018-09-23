@@ -21,7 +21,6 @@ body::-webkit-scrollbar-thumb {
 
 .container {
 	width: var(--wrapper-default);
-	// max-width: var(--wrapper-default);
 	max-width: 1980px;
 	margin: 0 auto;
 
@@ -34,6 +33,10 @@ body::-webkit-scrollbar-thumb {
 .content-margin {
 	margin-top: var(--content-margin);
 	@media(--below-small) { margin-top: var(--content-margin-m); }
+
+	&.-s {
+		margin-top: var(--content-margin-s);
+	}
 }
 
 a {

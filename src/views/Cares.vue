@@ -35,7 +35,21 @@ export default {
     }
   },
   created () {
-    document.addEventListener('keydown', event => {
+    document.addEventListener('keydown', event => this.keyPressListener(event))
+  },
+  destroyed () {
+    document.removeEventListener('keydown', this.keyPressListener)
+  },
+  computed: {
+    ...mapState({
+      storiesStore: state => state.care.stories
+    }),
+    stories () {
+      return this.storiesStore.map(({ story }) => story)
+    }
+  },
+  methods: {
+    keyPressListener (event) {
       const currentId = this.carousel.current_id
       const keyName = event.key
       const arrows = {
@@ -52,17 +66,7 @@ export default {
       } else if (isNext) {
         this.updateCount('next', currentId)
       }
-    })
-  },
-  computed: {
-    ...mapState({
-      storiesStore: state => state.care.stories
-    }),
-    stories () {
-      return this.storiesStore.map(({ story }) => story)
-    }
-  },
-  methods: {
+    },
     updateCount (direction, currentId) {
       const carouselCount = this.stories.length
       const conditions = {
@@ -81,9 +85,6 @@ export default {
       }
 
       this.carousel.current_id = newCount
-    },
-    test () {
-      console.log('swipe')
     }
   }
 }
