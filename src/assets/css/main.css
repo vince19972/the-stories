@@ -1,11 +1,16 @@
 @import '_reset';
 @import '_variables';
 
-html, body, .app {
+html, body {
 	font-family: var(--f-default);
 	background-color: var(--c-default);
 	color: var(--c-f-default);
 	overflow-x: hidden;
+	height: 100vh;
+}
+
+#app {
+	height: 100vh;
 }
 
 body::-webkit-scrollbar {

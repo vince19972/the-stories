@@ -1,9 +1,13 @@
 <template>
   <div class="container">
     <div class="content-margin -s">
-      <!-- <gradient-cover></gradient-cover> -->
-      <div :class="['phrases', {'-is-white': isWhite}]">
-        <p v-for="phrase in phrasesStore" :key="phrase.id" class="phrase" style="opacity: 0.1;">{{ phrase }}</p>
+      <div class="wrapper">
+        <div :class="['phrases', {'-is-white': isWhite}]">
+          <p v-for="phrase in phrasesStore" :key="phrase.id" class="phrase" style="opacity: 0.1;">{{ phrase }}</p>
+        </div>
+        <div :class="['unity-wrapper', isWhite ? '-is-show' : '-is-hidden']">
+          <h1 class="unity">UNITY</h1>
+        </div>
       </div>
     </div>
   </div>
@@ -39,15 +43,22 @@ export default {
         if (lightenedPercent() === 99) {
           this.updateBackground(lightenedPercent(), true)
           this.isWhite = true
+          this.$store.state.isUnity = true
         } else {
           this.updateBackground(lightenedPercent())
         }
       }
     })
   },
+  beforeDestroy () {
+    document.getElementsByTagName('body')[0].removeEventListener('mousewheel')
+    this.$store.state.isUnity = false
+    document.getElementsByTagName('body')[0].style.backgroundColor = 'black'
+  },
   computed: {
     ...mapState({
-      phrasesStore: state => state.fear.phrases
+      phrasesStore: state => state.fear.phrases,
+      isUnity: state => state.isUnity
     })
   },
   methods: {
@@ -87,6 +98,10 @@ export default {
 <style lang="postcss" scoped>
   @import '_variables';
 
+  .wrapper {
+    position: relative;
+  }
+
   .phrases {
     display: flex;
     flex-wrap: wrap;
@@ -105,5 +120,33 @@ export default {
     line-height: 2.5vw;
     margin-right: 1.5vw;
     transition: 1.5s;
+  }
+
+  .unity-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.-is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      transition: 1s;
+    }
+    &.-is-show {
+      opacity: 1;
+      pointer-events: visible;
+      transition: 1s;
+    }
+
+    & .unity {
+      font-size: 8vw;
+      color: var(--c-default);
+      margin-top: -96px;
+    }
   }
 </style>

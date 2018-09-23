@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav :class="[isUnity ? '-is-black' : '']">
     <div class="container">
       <transition name="fade">
         <div v-if="isHome" key="home" class="wrapper">
@@ -43,6 +43,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'base-header',
   data () {
@@ -53,8 +55,22 @@ export default {
       currentPage: '',
       currentEmotion: '',
       emotions: ['angers', 'cares', 'fears'],
-      navEmotions: []
+      navEmotions: [],
+      isBlack: false
     }
+  },
+  created () {
+    this.$store.watch(
+      state => this.$store.state.isUnity,
+      (newValue, oldValue) => {
+        this.isBlack = newValue
+      }
+    )
+  },
+  computed: {
+    ...mapState({
+      isUnity: state => state.isUnity
+    })
   },
   watch: {
     '$route' (to, from) {
@@ -89,6 +105,12 @@ export default {
     width: 100vw;
     height: var(--header-height);
 
+    &.-is-black {
+      & .link,
+      & .sublink {
+        color: var(--c-default);
+      }
+    }
     & .container {
       height: 100%;
       display: flex;
