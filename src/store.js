@@ -24,7 +24,7 @@ export default new Vuex.Store({
           id_href: 'ignorance',
           category: 'ignorance',
           story: false,
-          reference: false
+          reference: https://www.huffingtonpost.com/entry/white-people-wake-the-fuc_b_10898332.html
         },
         {
           id_href: 'racial-injustice',
@@ -54,14 +54,14 @@ export default new Vuex.Store({
           id_href: 'inefficiency',
           category: 'inefficiency',
           story: false,
-          reference: false
+          reference: https://www.wvgazettemail.com/life/columns/on_retirement/on-retirement-the-inefficiencies-of-the-health-care-industry/article_f7609e9b-9acd-5e63-97c7-116387a235c6.html
         },
 
         {
           id_href: 'lies',
           category: 'lies',
           story: false,
-          reference: false
+          reference: https://www.nytimes.com/2018/09/14/opinion/letters/trump-lying.html
         },
         {
           id_href: 'wasting-time',
