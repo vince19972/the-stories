@@ -49,9 +49,6 @@ export default {
     })
   },
   methods: {
-    test (text) {
-      alert(text)
-    },
     getRandomIntInclusive (min, max) {
       min = Math.ceil(min)
       max = Math.floor(max)
@@ -83,17 +80,14 @@ export default {
       }
     },
     scrollEvent (event) {
-      console.log(event)
       const isFull = () => this.phrasesStore.length - this.pickedPhraseId.length <= 1
       const lightenedPercent = () => Math.floor((this.pickedPhraseId.length / this.phrasesStore.length) * 100)
       const phrases = document.getElementsByClassName('phrase')
 
       if (!isFull()) {
         this.updateOpacity(phrases)
-        this.updateOpacity(phrases)
-        this.updateOpacity(phrases)
 
-        if (lightenedPercent() === 99) {
+        if (lightenedPercent() >= 95) {
           this.updateBackground(lightenedPercent(), true)
           this.isWhite = true
           this.$store.state.isUnity = true
