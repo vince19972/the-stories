@@ -17,6 +17,7 @@ export default {
     left: 0;
     height: 100vh;
     width: 100vw;
+    background: -webkit-linear-gradient(to bottom, transparent 0%, rgba(189,189,189,0) 60%, var(--c-default) 100%);
     background: linear-gradient(to bottom, transparent 0%, rgba(189,189,189,0) 60%, var(--c-default) 100%);
     pointer-events: none;
   }
