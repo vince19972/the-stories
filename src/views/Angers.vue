@@ -3,13 +3,21 @@
     <div class="content-margin">
       <gradient-cover></gradient-cover>
       <div class="phrases">
-        <router-link
+        <a
+          class="phrase"
+          v-for="story in storyObj" :key="story.id"
+          :href="[story.reference ? story.reference : 'javascript:void(0)']"
+          target="blank"
+        >
+        {{ story.category }}
+        </a>
+        <!-- <router-link
           class="phrase"
           v-for="phrase in categories" :key="phrase.id"
           :to="'/angers/' + phraseLink(phrase)"
         >
         {{ phrase }}
-        </router-link>
+        </router-link> -->
       </div>
     </div>
   </div>
@@ -30,6 +38,14 @@ export default {
     }),
     categories () {
       return this.storiesStore.map(story => story.category.replace(/-/g, ' '))
+    },
+    storyObj () {
+      return this.storiesStore.map(story => {
+        return {
+          category: story.category.replace(/-/g, ' '),
+          link: story.reference ? story.reference : false
+        }
+      })
     }
   },
   methods: {
