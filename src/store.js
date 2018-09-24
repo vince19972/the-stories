@@ -12,13 +12,13 @@ export default new Vuex.Store({
           id_href: 'captalism',
           category: 'captalism',
           story: false,
-          reference: false
+          reference: https://www.commondreams.org/views/2018/09/18/capitalist-manifesto-let-poor-people-die
         },
         {
           id_href: 'injustice',
           category: 'injustice',
           story: false,
-          reference: false
+          reference: https://www.thisamericanlife.org/656/let-me-count-the-ways
         },
         {
           id_href: 'ignorance',
@@ -30,13 +30,13 @@ export default new Vuex.Store({
           id_href: 'racial-injustice',
           category: 'racial-injustice',
           story: false,
-          reference: false
+          reference: https://www.aclu.org/blog/racial-justice/race-and-inequality-education/federal-data-shows-public-schools-nationwide-are
         },
         {
           id_href: 'sexism',
           category: 'sexism',
           story: false,
-          reference: false
+          reference: http://www.inamu.go.cr/machismo-mata-dos-mujeres-esta-semana
         },
         {
           id_href: 'new-york',
@@ -73,13 +73,13 @@ export default new Vuex.Store({
           id_href: 'climate-change-deniers',
           category: 'climate-change-deniers',
           story: false,
-          reference: false
+          reference: https://www.theguardian.com/environment/2018/aug/26/climate-change-is-real-we-must-not-offer-credibility-to-those-who-deny-it
         },
         {
           id_href: 'neoliberalism',
           category: 'neoliberalism',
           story: false,
-          reference: false
+          reference: https://www.theguardian.com/news/2017/aug/18/neoliberalism-the-idea-that-changed-the-world
         },
         {
           id_href: 'myself',
@@ -91,7 +91,7 @@ export default new Vuex.Store({
           id_href: 'abusive-to-livings',
           category: 'abusive-to-livings',
           story: false,
-          reference: false
+          reference: https://newrepublic.com/article/116799/egypt-does-not-need-pinochet
         },
         {
           id_href: 'lose-control-of-life',
@@ -127,7 +127,7 @@ export default new Vuex.Store({
           id_href: 'toxic-masculinity',
           category: 'toxic-masculinity',
           story: false,
-          reference: false
+          reference: https://www.newyorker.com/magazine/2017/11/20/the-weinstein-moment-and-the-trump-presidency
         },
         {
           id_href: 'labeling',
@@ -145,7 +145,7 @@ export default new Vuex.Store({
           id_href: 'pharmaceutical-industry',
           category: 'pharmaceutical-industry',
           story: false,
-          reference: false
+          reference: https://www.nytimes.com/2018/05/14/opinion/big-pharma-drug-companies.html
         },
         {
           id_href: 'art-for-arts-sake',
