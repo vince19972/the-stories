@@ -9,148 +9,191 @@ export default new Vuex.Store({
     anger: {
       stories: [
         {
-          id_href: 'gun-1',
-          category: 'gun-control',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'captalism',
+          category: 'captalism',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'poverty-1',
-          category: 'poverty',
-          story: 'February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'injustice',
+          category: 'injustice',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'pollution-1',
-          category: 'pollution',
-          story: 'In Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'ignorance',
+          category: 'ignorance',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'global-1',
-          category: 'global-warming',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'racial-injustice',
+          category: 'racial-injustice',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'trump-1',
-          category: 'trump',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'sexism',
+          category: 'sexism',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'racist-1',
-          category: 'racist',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'new-york',
+          category: 'new-york',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'gun-2',
-          category: 'gun-control',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'cheating',
+          category: 'cheating',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'poverty-2',
-          category: 'poverty',
-          story: 'February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'inefficiency',
+          category: 'inefficiency',
+          story: false,
+          reference: false
+        },
+
+        {
+          id_href: 'lies',
+          category: 'lies',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'pollution-2',
-          category: 'pollution',
-          story: 'In Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'wasting-time',
+          category: 'wasting-time',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'global-2',
-          category: 'global-warming',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'climate-change-deniers',
+          category: 'climate-change-deniers',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'trump-2',
-          category: 'trump',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'neoliberalism',
+          category: 'neoliberalism',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'racist-2',
-          category: 'racist',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'myself',
+          category: 'myself',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'gun-3',
-          category: 'gun-control',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'abusive-to-livings',
+          category: 'abusive-to-livings',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'poverty-3',
-          category: 'poverty',
-          story: 'February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'lose-control-of-life',
+          category: 'lose-control-of-life',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'pollution-3',
-          category: 'pollution',
-          story: 'In Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'showing-off',
+          category: 'showing-off',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'global-3',
-          category: 'global-warming',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'immature-people',
+          category: 'immature-people',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'trump-3',
-          category: 'trump',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'insensitive-people',
+          category: 'insensitive-people',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'racist-3',
-          category: 'racist',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'police-brutality',
+          category: 'police-brutality',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'gun-4',
-          category: 'gun-control',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'toxic-masculinity',
+          category: 'toxic-masculinity',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'poverty-4',
-          category: 'poverty',
-          story: 'February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'labeling',
+          category: 'labeling',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'pollution-4',
-          category: 'pollution',
-          story: 'In Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'the-president',
+          category: 'the-president',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'global-4',
-          category: 'global-warming',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'pharmaceutical-industry',
+          category: 'pharmaceutical-industry',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'trump-4',
-          category: 'trump',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'art-for-arts-sake',
+          category: 'art-for-arts-sake',
+          story: false,
+          reference: false
         },
         {
-          id_href: 'racist-4',
-          category: 'racist',
-          story: 'On the night of February 26, 2012, in Sanford, Florida, United States, George Zimmerman fatally shot Trayvon Martin, a 17-year-old African American high school student. ',
-          reference: 'https://google.com'
+          id_href: 'bigotry',
+          category: 'bigotry',
+          story: false,
+          reference: false
+        },
+        {
+          id_href: 'mass-incarceration',
+          category: 'mass-incarceration',
+          story: false,
+          reference: false
+        },
+        {
+          id_href: 'criminalizing sex work',
+          category: 'criminalizing sex work',
+          story: false,
+          reference: false
+        },
+        {
+          id_href: 'selfishness',
+          category: 'selfishness',
+          story: false,
+          reference: false
+        },
+        {
+          id_href: 'all-talk-no-action',
+          category: 'all-talk-no-action',
+          story: false,
+          reference: false
+        },
+        {
+          id_href: 'mta',
+          category: 'mta',
+          story: false,
+          reference: false
+        },
+        {
+          id_href: 'littering',
+          category: 'littering',
+          story: false,
+          reference: false
         }
       ]
     },

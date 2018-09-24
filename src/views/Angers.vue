@@ -29,7 +29,7 @@ export default {
       storiesStore: state => state.anger.stories
     }),
     categories () {
-      return this.storiesStore.map(story => story.category.replace('-', ' '))
+      return this.storiesStore.map(story => story.category.replace(/-/g, ' '))
     }
   },
   methods: {
