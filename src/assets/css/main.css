@@ -6,8 +6,8 @@ html, body {
 	background-color: var(--c-default);
 	color: var(--c-f-default);
 	overflow-x: hidden;
-	scroll-behavior: smooth;
-	-webkit-scroll-behavior: smooth;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 	height: 100vh;
 }
 
