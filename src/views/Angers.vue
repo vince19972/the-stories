@@ -6,7 +6,7 @@
         <a
           class="phrase"
           v-for="story in storyObj" :key="story.id"
-          :href="[story.reference ? story.reference : 'javascript:void(0)']"
+          :href="[story.link ? story.link : 'javascript:void(0)']"
           target="blank"
         >
         {{ story.category }}
