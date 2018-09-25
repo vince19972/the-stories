@@ -202,32 +202,15 @@ export default new Vuex.Store({
     care: {
       stories: [
         {
-          story: '1 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+          story: 'My favorite day of the entire year is the gay pride celebration at riis beach. Riis beach on that day is a magical place where I feel completely safe in my own body, something I don’t realize I am missing day to day until I am there. Despite 90% of the celebrators being nude, you will not hear anyone making any rude comments, no one being followed without their consent, you won’t even feel undesired eyes on your back. Everyone asked for preferred pronouns when you meet them, knows how to listen, and is quick to be enthusiastic about practically anything. You’ll see individuals proudly showing off their chest for the first time after top surgery, spending the day in dialogue with an individual from a different generation of the queer community, or celebrating coming out to their parents. For a group that is so often harassed and made to feel unsafe, it is utopian. - Julia Rich'
         },
         {
-          story: '2 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+          story: 'More and more elders are living along and one day they might just vanish without being noticed, and those elders used to be young just like us – and one day we could become one of them. If we could raise attention to the isolated senior citizens, help them, cure them with love, we might be living a happier life as we become elders. - Tianyi Xie'
         },
         {
-          story: '3 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+          story: 'Can I finally survive here and achieve what I want to achieve? Do I live happy and healthy? Do my beloved ones live well? - Shiyu Chen'
         },
-        {
-          story: '4 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
-        },
-        {
-          story: '5 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
-        },
-        {
-          story: '6 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
-        },
-        {
-          story: '7 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
-        },
-        {
-          story: '8 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
-        },
-        {
-          story: '9 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
-        }
+        { story: 'Barring some sort of A.I. powered innovation that allows for human immortality, all of us are going to die. So what's the point of anything that we're doing, any of the work we pursue, any of the career milestones or achievements? Does any of it matter? I don't know. But if I had to take a guess at something that does, some aspect of being human that had ultimate meaning and could give purpose to our lives, it would be connection. So I care about connection and it's building blocks: empathy, communication, and vulnerability. During our brief time as inhabitants of these fluid-filled sacks, I think we need to support and facilitate connection by cultivating empathy, by practicing honest and compassionate communication, and most of all by daring to take a risk and be vulnerable -- only then can we really see one another's raw, authentic, imperfect selves, and love each other more for it. - August Luhrs'
       ]
     },
     fear: {
