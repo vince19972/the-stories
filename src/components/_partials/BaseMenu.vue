@@ -27,9 +27,9 @@
         <span class="sublink-wrapper" @click="closeMenu()">
           <router-link to="about" class="sublink">ABOUT</router-link>
         </span>
-        <span class="sublink-wrapper" @click="closeMenu()">
+        <!-- <span class="sublink-wrapper" @click="closeMenu()">
           <router-link to="team" class="sublink">TEAM</router-link>
-        </span>
+        </span> -->
       </div>
     </div>
   </div>
