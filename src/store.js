@@ -42,13 +42,13 @@ export default new Vuex.Store({
           id_href: 'new-york',
           category: 'new-york',
           story: false,
-          reference: false
+          reference: 'http://gothamist.com/2013/09/24/bushwick_native_new_yorker_has_a_fe.php'
         },
         {
           id_href: 'cheating',
           category: 'cheating',
           story: false,
-          reference: false
+          reference: 'https://www.elitedaily.com/p/why-do-people-want-to-cheat-a-psychiatrist-explains-the-urge-even-for-people-in-love-11987134'
         },
         {
           id_href: 'inefficiency',
@@ -67,7 +67,7 @@ export default new Vuex.Store({
           id_href: 'wasting-time',
           category: 'wasting-time',
           story: false,
-          reference: false
+          reference: 'https://www.forbes.com/sites/francesbridges/2018/08/29/the-top-7-ways-you-are-wasting-your-time/#3d4720dc46ae'
         },
         {
           id_href: 'climate-change-deniers',
@@ -85,7 +85,7 @@ export default new Vuex.Store({
           id_href: 'myself',
           category: 'myself',
           story: false,
-          reference: false
+          reference: 'https://psychcentral.com/blog/how-to-stop-punishing-yourself/'
         },
         {
           id_href: 'abusive-to-livings',
@@ -97,31 +97,31 @@ export default new Vuex.Store({
           id_href: 'lose-control-of-life',
           category: 'lose-control-of-life',
           story: false,
-          reference: false
+          reference: 'https://medium.com/@timdenning/what-to-do-when-your-life-is-completely-out-of-control-26b3c723f509'
         },
         {
           id_href: 'showing-off',
           category: 'showing-off',
           story: false,
-          reference: false
+          reference: 'https://www.psychologytoday.com/us/blog/unified-theory-happiness/201610/5-ways-deal-someone-who-never-stops-bragging'
         },
         {
           id_href: 'immature-people',
           category: 'immature-people',
           story: false,
-          reference: false
+          reference: 'https://www.salon.com/2018/09/15/john-kerry-on-bill-maher-trump-is-immature-and-ignorant-focused-on-twitter-likes/'
         },
         {
           id_href: 'insensitive-people',
           category: 'insensitive-people',
           story: false,
-          reference: false
+          reference: 'https://www.nytimes.com/2015/06/21/opinion/sunday/is-your-boss-mean.html'
         },
         {
           id_href: 'police-brutality',
           category: 'police-brutality',
           story: false,
-          reference: false
+          reference: 'https://www.theatlantic.com/health/archive/2018/05/the-57375-years-of-life-lost-to-police-violence/559835/'
         },
         {
           id_href: 'toxic-masculinity',
@@ -133,13 +133,13 @@ export default new Vuex.Store({
           id_href: 'labeling',
           category: 'labeling',
           story: false,
-          reference: false
+          reference: 'https://www.psychologytoday.com/us/blog/ulterior-motives/201406/the-danger-labeling-others-or-yourself'
         },
         {
           id_href: 'the-president',
           category: 'the-president',
           story: false,
-          reference: false
+          reference: 'https://www.nytimes.com/2017/05/15/opinion/trump-classified-data.html'
         },
         {
           id_href: 'pharmaceutical-industry',
@@ -151,49 +151,49 @@ export default new Vuex.Store({
           id_href: 'art-for-arts-sake',
           category: 'art-for-arts-sake',
           story: false,
-          reference: false
+          reference: 'https://hyperallergic.com/462059/marina-abramovic-assaulted-arts-sake/'
         },
         {
           id_href: 'bigotry',
           category: 'bigotry',
           story: false,
-          reference: false
+          reference: 'https://www.bostonglobe.com/opinion/2018/05/18/the-president-vile-bigot/1euZENDiQbsexRdsSDnlcO/story.html'
         },
         {
           id_href: 'mass-incarceration',
           category: 'mass-incarceration',
           story: false,
-          reference: false
+          reference: 'https://www.aclu.org/issues/smart-justice/mass-incarceration/mass-incarceration-animated-series'
         },
         {
           id_href: 'criminalizing-sex-work',
           category: 'criminalizing-sex-work',
           story: false,
-          reference: false
+          reference: 'https://www.thenation.com/article/the-webhosting-service-for-sex-workers-by-sex-workers-against-sesta-fosta/ '
         },
         {
           id_href: 'selfishness',
           category: 'selfishness',
           story: false,
-          reference: false
+          reference: 'https://www.theguardian.com/commentisfree/2017/oct/29/selfishness-we-are-all-terrible-people-arwa-mahdawi'
         },
         {
           id_href: 'all-talk-no-action',
           category: 'all-talk-no-action',
           story: false,
-          reference: false
+          reference: 'https://www.reliableplant.com/Read/20958/eliminating-all-talk-no-action-work-ethic'
         },
         {
           id_href: 'mta',
           category: 'mta',
           story: false,
-          reference: false
+          reference: 'https://www.nytimes.com/2018/02/20/nyregion/mta-train-delays.html'
         },
         {
           id_href: 'littering',
           category: 'littering',
           story: false,
-          reference: false
+          reference: 'https://www.nzherald.co.nz/the-country/news/article.cfm?c_id=16&objectid=12124452'
         }
       ]
     },
