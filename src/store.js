@@ -181,7 +181,7 @@ export default new Vuex.Store({
           id_href: 'all-talk-no-action',
           category: 'all-talk-no-action',
           story: false,
-          reference: 'https://www.reliableplant.com/Read/20958/eliminating-'all-talk,-no-action'-work-ethic'
+          reference: 'https://www.reliableplant.com/Read/20958/eliminating-all-talk-no-action-work-ethic'
         },
         {
           id_href: 'mta',
