@@ -157,7 +157,7 @@ export default {
       margin-right: 1.5vw;
 
       @media(--below-tablet) {
-        font-size: 12px;
+        font-size: 16px;
         margin-right: 14px;
       }
     }
