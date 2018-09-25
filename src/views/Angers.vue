@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="content-margin">
-      <gradient-cover></gradient-cover>
+      <gradient-cover class="cover"></gradient-cover>
       <div class="phrases">
         <a
           class="phrase"
@@ -58,6 +58,10 @@ export default {
 
 <style lang="postcss" scoped>
   @import '_variables';
+
+  .cover {
+    @media(--below-tablet) { display: none; }
+  }
 
   .phrases {
     display: flex;

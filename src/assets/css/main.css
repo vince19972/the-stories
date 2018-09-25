@@ -45,6 +45,10 @@ body::-webkit-scrollbar-thumb {
 		width: var(--wrapper-ratio-m);
 		max-width: var(--wrapper-ratio-m);
 	}
+
+	& .-wrapper-s {
+		width: var(--wrapper-s);
+	}
 }
 
 .content-margin {

@@ -40,6 +40,11 @@ export default new Router({
       path: '/angers/:stories/:story',
       name: 'anger-story',
       component: () => import('./views/Anger/story/index.vue')
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('./views/About.vue')
     }
   ]
 })

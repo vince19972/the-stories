@@ -24,6 +24,7 @@
 
 	/* container */
 	--wrapper: 1240px;
+	--wrapper-s: 65%;
 	--wrapper-ratio: 80vw;
 	--wrapper-ratio-m: 88vw;
 	--wrapper-default: var(--wrapper-ratio);

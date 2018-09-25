@@ -24,8 +24,12 @@
         </div>
       </div>
       <div class="btm">
-        <router-link to="about" class="sublink" @click="closeMenu()">ABOUT</router-link>
-        <router-link to="team" class="sublink" @click="closeMenu()">TEAM</router-link>
+        <span class="sublink-wrapper" @click="closeMenu()">
+          <router-link to="about" class="sublink">ABOUT</router-link>
+        </span>
+        <span class="sublink-wrapper" @click="closeMenu()">
+          <router-link to="team" class="sublink">TEAM</router-link>
+        </span>
       </div>
     </div>
   </div>
@@ -114,7 +118,7 @@ export default {
   .top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8vw;
+    margin-bottom: 64px;
 
     & .left {
       display: flex;

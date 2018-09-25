@@ -27,7 +27,23 @@
             <hamburger></hamburger>
           </div>
         </div>
-        <div v-else key="story" class="wrapper -flex-between">
+        <div v-else key="other" class="wrapper -flex-between">
+          <div class="nav-left">
+            <router-link to="/" class="link">THE STORIES</router-link>
+          </div>
+          <div class="nav-right">
+            <router-link
+              v-for="route in navEmotions"
+              :key="route.id"
+              :to="route"
+              class="sublink"
+            >
+            {{ route }}
+            </router-link>
+            <hamburger></hamburger>
+          </div>
+        </div>
+        <!-- <div v-else key="story" class="wrapper -flex-between">
           <div class="nav-left">
             <router-link to="/" class="link">THE STORIES: </router-link>
             <router-link :to="'/' + currentEmotion" class="link current">{{ currentEmotion }}</router-link>
@@ -42,7 +58,7 @@
             {{ route }}
             </router-link>
           </div>
-        </div>
+        </div> -->
       </transition>
     </div>
   </nav>
@@ -86,6 +102,8 @@ export default {
     '$route' (to, from) {
       const currentRoute = this.$route.name
       this.currentRoute = currentRoute
+
+      console.log(currentRoute)
 
       // detect current page
       this.isEmotionPage = this.emotions.filter(emotion => currentRoute === emotion).length > 0
@@ -167,6 +185,7 @@ export default {
     margin-right: var(--gutter);
     opacity: 0.9;
     transition: .3s;
+    margin-top: -4px;
 
     &:hover {
       opacity: 1;
@@ -174,10 +193,7 @@ export default {
     }
     &:last-child { margin-right: 0; }
 
-    @media(--below-desktop) {
-      font-size: var(--logo-size-m);
-      margin-top: -4px;
-    }
+    @media(--below-desktop) { font-size: var(--logo-size-m); }
     @media(--below-small) { margin-right: 8px; }
     @media(--below-mobile) {
       display: none;
