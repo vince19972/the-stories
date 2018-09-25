@@ -45,6 +45,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: () => import('./views/About.vue')
+    },
+    {
+      path: '/fears-voice',
+      name: 'fears-voice',
+      component: () => import('./views/FearsVoice.vue')
     }
   ]
 })

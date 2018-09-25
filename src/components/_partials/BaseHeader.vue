@@ -103,8 +103,6 @@ export default {
       const currentRoute = this.$route.name
       this.currentRoute = currentRoute
 
-      console.log(currentRoute)
-
       // detect current page
       this.isEmotionPage = this.emotions.filter(emotion => currentRoute === emotion).length > 0
       this.isHome = currentRoute === 'home'
