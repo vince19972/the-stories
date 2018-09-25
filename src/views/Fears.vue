@@ -27,11 +27,20 @@ export default {
   data () {
     return {
       pickedPhraseId: [],
-      isWhite: false
+      isWhite: false,
+      menuOpen: false
     }
   },
   components: {
     GradientCover
+  },
+  created () {
+    this.$store.watch(
+      state => this.$store.state.menuOpen,
+      (newValue, oldValue) => {
+        this.menuOpen = newValue
+      }
+    )
   },
   mounted () {
     document.getElementsByTagName('body')[0].addEventListener('mousewheel', event => this.scrollEvent(event))
@@ -80,19 +89,21 @@ export default {
       }
     },
     scrollEvent (event) {
-      const isFull = () => this.phrasesStore.length - this.pickedPhraseId.length <= 1
-      const lightenedPercent = () => Math.floor((this.pickedPhraseId.length / this.phrasesStore.length) * 100)
-      const phrases = document.getElementsByClassName('phrase')
+      if (!this.menuOpen) {
+        const isFull = () => this.phrasesStore.length - this.pickedPhraseId.length <= 1
+        const lightenedPercent = () => Math.floor((this.pickedPhraseId.length / this.phrasesStore.length) * 100)
+        const phrases = document.getElementsByClassName('phrase')
 
-      if (!isFull()) {
-        this.updateOpacity(phrases)
+        if (!isFull()) {
+          this.updateOpacity(phrases)
 
-        if (lightenedPercent() >= 95) {
-          this.updateBackground(lightenedPercent(), true)
-          this.isWhite = true
-          this.$store.state.isUnity = true
-        } else {
-          this.updateBackground(lightenedPercent())
+          if (lightenedPercent() >= 95) {
+            this.updateBackground(lightenedPercent(), true)
+            this.isWhite = true
+            this.$store.state.isUnity = true
+          } else {
+            this.updateBackground(lightenedPercent())
+          }
         }
       }
     }

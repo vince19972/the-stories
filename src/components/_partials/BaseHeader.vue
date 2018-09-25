@@ -2,10 +2,15 @@
   <nav :class="[isUnity ? '-is-black' : '']">
     <div class="container">
       <transition name="fade">
-        <div v-if="isHome" key="home" class="wrapper">
-          <router-link to="/" class="link">THE STORIES</router-link>
+        <div v-if="isHome" key="home" class="wrapper -flex-between">
+          <div class="nav-left">
+            <router-link to="/" class="link">THE STORIES</router-link>
+          </div>
+          <div class="nav-right">
+            <hamburger></hamburger>
+          </div>
         </div>
-        <div v-else-if="isEmotionPage" key="emotion" class="wrapper -is-emotion-page">
+        <div v-else-if="isEmotionPage" key="emotion" class="wrapper -flex-between">
           <div class="nav-left">
             <router-link to="/" class="link">THE STORIES: </router-link>
             <router-link :to="'/' + currentPage" class="link current">{{ currentPage }}</router-link>
@@ -19,9 +24,10 @@
             >
             {{ route }}
             </router-link>
+            <hamburger></hamburger>
           </div>
         </div>
-        <div v-else key="story" class="wrapper -is-emotion-page">
+        <div v-else key="story" class="wrapper -flex-between">
           <div class="nav-left">
             <router-link to="/" class="link">THE STORIES: </router-link>
             <router-link :to="'/' + currentEmotion" class="link current">{{ currentEmotion }}</router-link>
@@ -44,9 +50,13 @@
 
 <script>
 import { mapState } from 'vuex'
+import Hamburger from '@/components/_partials/Hamburger.vue'
 
 export default {
   name: 'base-header',
+  components: {
+    Hamburger
+  },
   data () {
     return {
       isEmotionPage: false,
@@ -54,7 +64,6 @@ export default {
       currentRoute: '/',
       currentPage: '',
       currentEmotion: '',
-      emotions: ['angers', 'cares', 'fears'],
       navEmotions: [],
       isBlack: false
     }
@@ -69,7 +78,8 @@ export default {
   },
   computed: {
     ...mapState({
-      isUnity: state => state.isUnity
+      isUnity: state => state.isUnity,
+      emotions: state => state.emotions
     })
   },
   watch: {
@@ -127,11 +137,14 @@ export default {
 
     @media(--below-desktop) { justify-content: flex-start; }
   }
-  .-is-emotion-page {
+  .-flex-between {
     justify-content: space-between;
   }
   .nav-left {
     & .current { font-weight: var(--f-bold); }
+  }
+  .nav-right {
+    display: flex;
   }
 
   .link {
@@ -148,6 +161,7 @@ export default {
     @media(--below-mobile) { font-size: var(--logo-size-s);}
   }
   .sublink {
+    display: block;
     font-size: var(--logo-size);
     letter-spacing: var(--letter-space-default);
     margin-right: var(--gutter);
@@ -160,9 +174,15 @@ export default {
     }
     &:last-child { margin-right: 0; }
 
-    @media(--below-desktop) { font-size: var(--logo-size-m); }
+    @media(--below-desktop) {
+      font-size: var(--logo-size-m);
+      margin-top: -4px;
+    }
     @media(--below-small) { margin-right: 8px; }
-    @media(--below-mobile) { font-size: var(--logo-size-s);}
+    @media(--below-mobile) {
+      display: none;
+      font-size: var(--logo-size-s);
+    }
   }
 
   .fade-enter-active {

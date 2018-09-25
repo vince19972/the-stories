@@ -9,10 +9,20 @@ html, body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 	height: 100vh;
+
+	transition: backgroundColor .3s;
+
+	&.-is-fixed {
+		overflow-y: hidden;
+	}
 }
 
 #app {
 	height: 100vh;
+
+	&.-is-fixed {
+		overflow-y: hidden;
+	}
 }
 
 body::-webkit-scrollbar {

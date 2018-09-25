@@ -4,12 +4,12 @@
     <title>Group</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-        <g id="header" transform="translate(-1289.000000, -41.000000)" stroke="#F5F5F5" stroke-width="2">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header" transform="translate(-1289.000000, -41.000000)" fill="#F5F5F5" fill-rule="nonzero">
             <g id="Group" transform="translate(1290.000000, 42.000000)">
-                <path d="M0.173267327,0.5 L34.8336627,0.5" id="Line-2"></path>
-                <path d="M0.173267327,6.5 L34.8336627,6.5" id="Line-2-Copy"></path>
-                <path d="M0.173267327,12.5 L34.8336627,12.5" id="Line-2-Copy-2"></path>
+                <polygon id="Line-2" points="-0.826732673 1.5 -0.826732673 -0.5 35.8336627 -0.5 35.8336627 1.5"></polygon>
+                <polygon id="Line-2-Copy" points="-0.826732673 7.5 -0.826732673 5.5 35.8336627 5.5 35.8336627 7.5"></polygon>
+                <polygon id="Line-2-Copy-2" points="-0.826732673 13.5 -0.826732673 11.5 35.8336627 11.5 35.8336627 13.5"></polygon>
             </g>
         </g>
     </g>

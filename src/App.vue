@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <div id="app" :class="[menuOpen ? '-is-fixed' : '']">
+    <base-menu></base-menu>
     <base-header></base-header>
     <transition name="fade">
       <router-view></router-view>
@@ -9,10 +10,25 @@
 
 <script>
 import BaseHeader from '@/components/_partials/BaseHeader.vue'
+import BaseMenu from '@/components/_partials/BaseMenu.vue'
 
 export default {
   components: {
-    BaseHeader
+    BaseHeader,
+    BaseMenu
+  },
+  data () {
+    return {
+      'menuOpen': false
+    }
+  },
+  created () {
+    this.$store.watch(
+      state => this.$store.state.menuOpen,
+      (newValue, oldValue) => {
+        this.menuOpen = newValue
+      }
+    )
   }
 }
 </script>
