@@ -202,10 +202,12 @@ export default new Vuex.Store({
     care: {
       stories: [
         {
-          story: '1 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+          story: 'Barring some sort of A.I. powered innovation that allows for human immortality, all of us are going to die. So what's the point of anything that we're doing, any of the work we pursue, any of the career milestones or achievements? Does any of it matter? I don't know. But if I had to take a guess at something that does, some aspect of being human that had ultimate meaning and could give purpose to our lives, it would be connection. So I care about connection and it's building blocks: empathy, communication, and vulnerability. During our brief time as inhabitants of these fluid-filled sacks, I think we need to support and facilitate connection by cultivating empathy, by practicing honest and compassionate communication, and most of all by daring to take a risk and be vulnerable -- only then can we really see one another's raw, authentic, imperfect selves, and love each other more for it.
+          - August Luhrs'
         },
         {
-          story: '2 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
+          story: 'More and more elders are living along and one day they might just vanish without being noticed, and those elders used to be young just like us – and one day we could become one of them. If we could raise attention to the isolated senior citizens, help them, cure them with love, we might be living a happier life as we become elders.
+          - Tianyi Xie'
         },
         {
           story: '3 ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget felis eget nunc lobortis mattis aliquam'
