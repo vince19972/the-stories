@@ -12,7 +12,7 @@
           v-for="(story, index) in stories" :key="story.id"
           :class="['carousel__item', {'-is-active': carousel.current_id === index}]"
         >
-          <p class="carousel__content">{{story}}</p>
+          <p class="carousel__content" v-html="story"></p>
         </div>
       </div>
       <button class="arrow -right" @click="updateCount('next', carousel.current_id)">
