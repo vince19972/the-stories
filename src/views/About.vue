@@ -20,6 +20,10 @@ export default {
 <style lang="postcss" scoped>
   @import '_variables';
 
+  .content-margin {
+    margin-bottom: 72px;
+  }
+
   .paragraph {
     font-size: var(--fs-default);
     line-height: 40px;
