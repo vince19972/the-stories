@@ -39,9 +39,20 @@ export default {
     margin-bottom: 72px;
   }
 
+  .-wrapper-s {
+    @media(--below-tablet) {
+      width: 100%;
+    }
+  }
+
   .paragraph {
     font-size: var(--fs-default);
     line-height: 40px;
+
+    @media(--below-tablet) {
+      font-size: 16px;
+      line-height: 24px;
+    }
 
     & p {
       margin-bottom: 48px;
@@ -55,6 +66,11 @@ export default {
     padding-bottom: 80px;
     border-bottom: 1px solid var(--c-highlight);
     margin-bottom: 48px;
+
+    @media(--below-tablet) {
+      padding-bottom: 56px;
+      margin-bottom: 32px;
+    }
   }
 
   .btm {
@@ -63,11 +79,20 @@ export default {
 
     & .team {
       font-size: 24px;
+
+      @media(--below-tablet) {
+        font-size: 16px;
+      }
     }
 
     & .name {
       font-size: 22px;
       line-height: 40px;
+
+      @media(--below-tablet) {
+        font-size: 16px;
+        line-height: 32px;
+      }
     }
   }
 </style>
