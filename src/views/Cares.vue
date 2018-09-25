@@ -104,7 +104,7 @@ export default {
 
   .arrow {
     position: absolute;
-    bottom: 50%;
+    bottom: calc(50% - 24px);
     z-index: 2;
     opacity: .6;
     transition: .3s;
@@ -147,9 +147,9 @@ export default {
   .carousel__item {
     position: absolute;
     top: 0;
-    left: 10%;
+    left: 15%;
     height: 100%;
-    width: 80%;
+    width: 70%;
     display: flex;
     align-items: center;
     text-align: center;
@@ -161,9 +161,23 @@ export default {
       opacity: 1;
       transition: 1s;
     }
+
+    @media(--below-tablet) {
+      width: 80%;
+      left: 10%;
+    }
   }
   .carousel__content {
-    font-size: var(--carousel-fs);
-    @media(--below-tablet) { font-size: var(--carousel-fs-m); }
+    font-size: 24px;
+    line-height: 36px;
+    @media(--below-desktop) {
+      font-size: 16px;
+      line-height: 28px;
+    }
+    @media(--below-tablet) {
+      text-align: left;
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 </style>
