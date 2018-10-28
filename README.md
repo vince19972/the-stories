@@ -1,4 +1,6 @@
-# main-cli
+# The Stories
+
+This is a experimental site built for ITP Applications 2018. 
 
 ## Project setup
 ```
